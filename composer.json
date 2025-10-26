@@ -1,0 +1,50 @@
+{
+    "name": "rankvectors/rankvectors",
+    "description": "Official RankVectors API SDK for PHP - intelligent internal linking optimization using AI",
+    "keywords": [
+        "rankvectors",
+        "api",
+        "sdk",
+        "php",
+        "seo",
+        "internal-linking",
+        "ai",
+        "rest"
+    ],
+    "homepage": "https://docs.rankvectors.com/sdk/php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "RankVectors",
+            "email": "support@rankvectors.com",
+            "homepage": "https://rankvectors.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "friendsofphp/php-cs-fixer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": { "RankVectors\\" : "lib/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "RankVectors\\Test\\" : "test/" }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "cs-fix": "php-cs-fixer fix"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
