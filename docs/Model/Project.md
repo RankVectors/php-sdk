@@ -30,6 +30,6 @@ Name | Type | Description | Notes
 **enable_change_tracking** | **bool** | Whether to enable change tracking | [optional]
 **created_at** | **\DateTime** | Project creation timestamp |
 **updated_at** | **\DateTime** | Last update timestamp |
-**_count** | [**\com.rankvectors\com.rankvectors.model\ProjectCount**](ProjectCount.md) |  | [optional]
+**_count** | [**\OpenAPI\Client\Model\ProjectCount**](ProjectCount.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

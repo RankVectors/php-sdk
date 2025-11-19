@@ -1,4 +1,4 @@
-# com.rankvectors\WebhooksApi
+# OpenAPI\Client\WebhooksApi
 
 All URIs are relative to https://api.rankvectors.com, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.rankvectors.com, except if the operation de
 ## `getImplementationInstructions()`
 
 ```php
-getImplementationInstructions($suggestion_id): \com.rankvectors\com.rankvectors.model\ImplementationInstructions
+getImplementationInstructions($suggestion_id): \OpenAPI\Client\Model\ImplementationInstructions
 ```
 
 Get implementation instructions
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new com.rankvectors\Api\WebhooksApi(
+$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\com.rankvectors\com.rankvectors.model\ImplementationInstructions**](../Model/ImplementationInstructions.md)
+[**\OpenAPI\Client\Model\ImplementationInstructions**](../Model/ImplementationInstructions.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `reportImplementationStatus()`
 
 ```php
-reportImplementationStatus($report_implementation_status_request): \com.rankvectors\com.rankvectors.model\ReportImplementationStatus200Response
+reportImplementationStatus($report_implementation_status_request): \OpenAPI\Client\Model\ReportImplementationStatus200Response
 ```
 
 Report implementation status
@@ -88,18 +88,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new com.rankvectors\Api\WebhooksApi(
+$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$report_implementation_status_request = new \com.rankvectors\com.rankvectors.model\ReportImplementationStatusRequest(); // \com.rankvectors\com.rankvectors.model\ReportImplementationStatusRequest
+$report_implementation_status_request = new \OpenAPI\Client\Model\ReportImplementationStatusRequest(); // \OpenAPI\Client\Model\ReportImplementationStatusRequest
 
 try {
     $result = $apiInstance->reportImplementationStatus($report_implementation_status_request);
@@ -113,11 +113,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **report_implementation_status_request** | [**\com.rankvectors\com.rankvectors.model\ReportImplementationStatusRequest**](../Model/ReportImplementationStatusRequest.md)|  | |
+| **report_implementation_status_request** | [**\OpenAPI\Client\Model\ReportImplementationStatusRequest**](../Model/ReportImplementationStatusRequest.md)|  | |
 
 ### Return type
 
-[**\com.rankvectors\com.rankvectors.model\ReportImplementationStatus200Response**](../Model/ReportImplementationStatus200Response.md)
+[**\OpenAPI\Client\Model\ReportImplementationStatus200Response**](../Model/ReportImplementationStatus200Response.md)
 
 ### Authorization
 

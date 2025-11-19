@@ -1,4 +1,4 @@
-# com.rankvectors\ImplementationsApi
+# OpenAPI\Client\ImplementationsApi
 
 All URIs are relative to https://api.rankvectors.com, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.rankvectors.com, except if the operation de
 ## `getImplementation()`
 
 ```php
-getImplementation($project_id, $implementation_id): \com.rankvectors\com.rankvectors.model\GetImplementation200Response
+getImplementation($project_id, $implementation_id): \OpenAPI\Client\Model\GetImplementation200Response
 ```
 
 Get implementation details
@@ -28,12 +28,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new com.rankvectors\Api\ImplementationsApi(
+$apiInstance = new OpenAPI\Client\Api\ImplementationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\com.rankvectors\com.rankvectors.model\GetImplementation200Response**](../Model/GetImplementation200Response.md)
+[**\OpenAPI\Client\Model\GetImplementation200Response**](../Model/GetImplementation200Response.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `implementLinks()`
 
 ```php
-implementLinks($project_id, $implementation_request): \com.rankvectors\com.rankvectors.model\ImplementationResponse
+implementLinks($project_id, $implementation_request): \OpenAPI\Client\Model\ImplementationResponse
 ```
 
 Implement link suggestions
@@ -92,19 +92,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new com.rankvectors\Api\ImplementationsApi(
+$apiInstance = new OpenAPI\Client\Api\ImplementationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $project_id = proj-123; // string | Unique identifier for the project
-$implementation_request = {"suggestionIds":["sugg-123"],"platform":"custom","credentials":{"webhookUrl":"https://yourapi.com/rankvectors-webhook","apiKey":"your-webhook-secret-key"}}; // \com.rankvectors\com.rankvectors.model\ImplementationRequest
+$implementation_request = {"suggestionIds":["sugg-123"],"platform":"custom","credentials":{"webhookUrl":"https://yourapi.com/rankvectors-webhook","apiKey":"your-webhook-secret-key"}}; // \OpenAPI\Client\Model\ImplementationRequest
 
 try {
     $result = $apiInstance->implementLinks($project_id, $implementation_request);
@@ -119,11 +119,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **project_id** | **string**| Unique identifier for the project | |
-| **implementation_request** | [**\com.rankvectors\com.rankvectors.model\ImplementationRequest**](../Model/ImplementationRequest.md)|  | |
+| **implementation_request** | [**\OpenAPI\Client\Model\ImplementationRequest**](../Model/ImplementationRequest.md)|  | |
 
 ### Return type
 
-[**\com.rankvectors\com.rankvectors.model\ImplementationResponse**](../Model/ImplementationResponse.md)
+[**\OpenAPI\Client\Model\ImplementationResponse**](../Model/ImplementationResponse.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ try {
 ## `listImplementations()`
 
 ```php
-listImplementations($project_id, $status, $platform, $limit, $offset): \com.rankvectors\com.rankvectors.model\ListImplementations200Response
+listImplementations($project_id, $status, $platform, $limit, $offset): \OpenAPI\Client\Model\ListImplementations200Response
 ```
 
 List implementations
@@ -156,12 +156,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new com.rankvectors\Api\ImplementationsApi(
+$apiInstance = new OpenAPI\Client\Api\ImplementationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -193,7 +193,7 @@ try {
 
 ### Return type
 
-[**\com.rankvectors\com.rankvectors.model\ListImplementations200Response**](../Model/ListImplementations200Response.md)
+[**\OpenAPI\Client\Model\ListImplementations200Response**](../Model/ListImplementations200Response.md)
 
 ### Authorization
 
@@ -211,12 +211,12 @@ try {
 ## `rollbackImplementation()`
 
 ```php
-rollbackImplementation($project_id, $implementation_id, $rollback_implementation_request): \com.rankvectors\com.rankvectors.model\RollbackImplementation200Response
+rollbackImplementation($project_id, $implementation_id, $rollback_implementation_request): \OpenAPI\Client\Model\RollbackImplementation200Response
 ```
 
 Rollback implementation
 
-Undo a link implementation and restore original content
+Undo a link implementation and restore original content.  Rollback is universally available for all platforms: - WordPress (via custom/webhook) - Shopify (direct API) - Vercel (via custom/webhook) - Webflow (via custom/webhook) - Contentful (via custom/webhook) - Custom (via webhook)  The rollback process restores the original content that was stored during implementation.
 
 ### Example
 
@@ -226,12 +226,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new com.rankvectors\Api\ImplementationsApi(
+$apiInstance = new OpenAPI\Client\Api\ImplementationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -239,7 +239,7 @@ $apiInstance = new com.rankvectors\Api\ImplementationsApi(
 );
 $project_id = proj-123; // string | Unique identifier for the project
 $implementation_id = impl-123; // string | Unique identifier for the implementation
-$rollback_implementation_request = new \com.rankvectors\com.rankvectors.model\RollbackImplementationRequest(); // \com.rankvectors\com.rankvectors.model\RollbackImplementationRequest
+$rollback_implementation_request = new \OpenAPI\Client\Model\RollbackImplementationRequest(); // \OpenAPI\Client\Model\RollbackImplementationRequest
 
 try {
     $result = $apiInstance->rollbackImplementation($project_id, $implementation_id, $rollback_implementation_request);
@@ -255,11 +255,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **project_id** | **string**| Unique identifier for the project | |
 | **implementation_id** | **string**| Unique identifier for the implementation | |
-| **rollback_implementation_request** | [**\com.rankvectors\com.rankvectors.model\RollbackImplementationRequest**](../Model/RollbackImplementationRequest.md)|  | |
+| **rollback_implementation_request** | [**\OpenAPI\Client\Model\RollbackImplementationRequest**](../Model/RollbackImplementationRequest.md)|  | |
 
 ### Return type
 
-[**\com.rankvectors\com.rankvectors.model\RollbackImplementation200Response**](../Model/RollbackImplementation200Response.md)
+[**\OpenAPI\Client\Model\RollbackImplementation200Response**](../Model/RollbackImplementation200Response.md)
 
 ### Authorization
 

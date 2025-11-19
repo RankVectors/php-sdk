@@ -1,4 +1,4 @@
-# com.rankvectors\CrawlingApi
+# OpenAPI\Client\CrawlingApi
 
 All URIs are relative to https://api.rankvectors.com, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.rankvectors.com, except if the operation de
 ## `getCrawlHistory()`
 
 ```php
-getCrawlHistory($project_id): \com.rankvectors\com.rankvectors.model\Crawl[]
+getCrawlHistory($project_id): \OpenAPI\Client\Model\Crawl[]
 ```
 
 Get crawl history
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new com.rankvectors\Api\CrawlingApi(
+$apiInstance = new OpenAPI\Client\Api\CrawlingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\com.rankvectors\com.rankvectors.model\Crawl[]**](../Model/Crawl.md)
+[**\OpenAPI\Client\Model\Crawl[]**](../Model/Crawl.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `startCrawl()`
 
 ```php
-startCrawl($project_id, $start_crawl_request): \com.rankvectors\com.rankvectors.model\Crawl
+startCrawl($project_id, $start_crawl_request): \OpenAPI\Client\Model\Crawl
 ```
 
 Start website crawl
@@ -88,19 +88,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.rankvectors\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new com.rankvectors\Api\CrawlingApi(
+$apiInstance = new OpenAPI\Client\Api\CrawlingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $project_id = proj-123; // string | Unique identifier for the project
-$start_crawl_request = new \com.rankvectors\com.rankvectors.model\StartCrawlRequest(); // \com.rankvectors\com.rankvectors.model\StartCrawlRequest
+$start_crawl_request = new \OpenAPI\Client\Model\StartCrawlRequest(); // \OpenAPI\Client\Model\StartCrawlRequest
 
 try {
     $result = $apiInstance->startCrawl($project_id, $start_crawl_request);
@@ -115,11 +115,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **project_id** | **string**| Unique identifier for the project | |
-| **start_crawl_request** | [**\com.rankvectors\com.rankvectors.model\StartCrawlRequest**](../Model/StartCrawlRequest.md)|  | [optional] |
+| **start_crawl_request** | [**\OpenAPI\Client\Model\StartCrawlRequest**](../Model/StartCrawlRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\com.rankvectors\com.rankvectors.model\Crawl**](../Model/Crawl.md)
+[**\OpenAPI\Client\Model\Crawl**](../Model/Crawl.md)
 
 ### Authorization
 
